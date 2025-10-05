@@ -1,57 +1,63 @@
-# AI in Agriculture: Crop Monitoring and Yield Prediction
+# AI in Agriculture: Rice Yield Prediction
 
-## Project Overview
+## 🌱 Motivation & Goal
 
-This project leverages machine learning techniques to predict **Rice Yield (Kg/ha)** based on agricultural data such as year, area of cultivation, production, and state. It demonstrates the use of **EDA**, **outlier removal**, **data preprocessing**, **model training**, and **evaluation**.
+Agriculture is fundamental to global food security. Accurately estimating crop yields helps farmers, policymakers, and researchers make decisions about resource allocation, crop planning, and food distribution.  
+This project aims to predict **rice crop yield (kg/ha)** using machine learning models trained on historical agricultural data. By doing so, it demonstrates how data-driven approaches can enhance crop planning and agricultural output.
 
+## 📂 Project Overview
 
-## Dataset
+This repository contains:
+- Data preprocessing and outlier removal techniques  
+- Exploratory Data Analysis (EDA)  
+- Model training, evaluation & deployment  
+- Visualizations of results  
+- Metrics and statistical interpretation
 
-### Source:
+## 🧠 Key Concepts & Metrics
 
-- `Crops_data.csv` (original raw data)
+Here are some concepts used in this project to help you follow along:
 
-### Derived Datasets:
+| Concept | Explanation |
+|---|---|
+| **IQR (Interquartile Range)** | Used to detect and remove outliers in the dataset by filtering values outside the typical range |
+| **R² (Coefficient of Determination)** | Indicates proportion of variance in yield that is explained by the model |
+| **MAE (Mean Absolute Error)** | Average absolute difference between predicted and true yields |
+| **RMSE (Root Mean Squared Error)** | Penalizes larger errors more strongly; gives insight into prediction variance |
 
-- `rice_data.csv`: Extracted rice-related data
-- `rice_data_outlier_removed.csv`: Cleaned rice dataset after removing outliers using IQR
+## 📁 Folder & File Structure
 
+├── datasets/
 
+│ ├── Crops_data.csv
 
-## Notebooks
+│ ├── rice_data.csv
 
-| Notebook                         | Description                                                                                           |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `01_Preprocessing.ipynb`         | Loaded original dataset, filtered for rice, handled missing/null values, encoded categorical features |
-| `02_EDA.ipynb`                   | Performed data visualization, outlier detection and removal (IQR method), and saved the cleaned data  |
-| `03_Modelling.ipynb`             | Trained Random Forest model, performed scaling, trained/test split, saved model and scaler            |
-| `04_Evaluation_Deployment.ipynb` | Evaluated the model (R², MAE, RMSE), plotted results, and saved prediction output                     |
-
-
-
-## Model & Accuracy
-
-- **Model Used**: Random Forest Regressor
-- **Train Accuracy**: ~99.2%
-- **Test Accuracy (R²)**: ~95.4%
-- **MAE**: ~107.5
-- **RMSE**: ~56287.4
+│ └── rice_data_outlier_removed.csv
 
 
+├── notebooks/
 
-## Tech Stack
+│ ├── 01_Preprocessing.ipynb
 
-- **Language**: Python
-- **Libraries**: pandas, numpy, matplotlib, seaborn, sklearn
-- **IDE**: Jupyter Notebook (Anaconda)
+│ ├── 02_EDA.ipynb
+
+│ ├── 03_Modelling.ipynb
+
+│ └── 04_Evaluation_Deployment.ipynb
 
 
+├── models/
 
-## Notes
 
-- Outliers were removed using IQR before training.
-- Data was scaled using `StandardScaler`.
-- Cross-validation was also explored to prevent overfitting.
+├── plots/
+
+
+├── README.md
+
+├── CONTRIBUTING.md
+
+└── requirements.txt
 
 
 
@@ -74,6 +80,7 @@ This project leverages machine learning techniques to predict **Rice Yield (Kg/h
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
+
 
 
 
